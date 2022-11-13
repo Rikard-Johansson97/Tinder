@@ -1,0 +1,197 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/* COLORS */
+:root {
+    --bg-color: #fffffe;
+    --like-color: #00ebc7;
+    --dislike-color: #ff5470;
+    --gold-color: #fde24f;
+}
+
+html {
+    background-color: var(--dislike-color);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    max-width: 60rem;
+    padding: 20px;
+    margin: auto;
+    border: #ff5470 solid;
+}
+/* NAV */
+nav {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: whitesmoke;
+    box-shadow: 0rem 0rem 1rem var(--dislike-color);
+}
+.fa-person-half-dress {
+    font-size: 4rem;
+    color: var(--dislike-color);
+}
+/* IMG CONTAINER */
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    padding: 2rem 0 2rem 0;
+}
+.date-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 1rem var(--dislike-color);
+    border-radius: 2rem;
+}
+.date-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    left: 0;
+    border-radius: 2rem;
+    padding: 3rem 3rem 3rem 3rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
+}    
+.name {
+    margin-left: 1.7rem;
+    font-size: 3rem;
+    color: var(--bg-color);
+}
+.age {
+    font-size: 2rem;
+    color: var(--bg-color);
+}
+.fa-house, .fa-location-dot ,.fa-mars-and-venus,.fa-phone{
+    color: #ff5470;
+    font-size: 2rem;
+    text-align: center;
+    width: 3rem;
+    margin: 1rem;
+}
+.tel{
+    text-decoration: 0;
+    color: var(--bg-color);
+    font-size: 1.8rem;
+    border-bottom: 1px var(--dislike-color) solid;
+
+}
+.date-info-container p span{
+    font-size: 1.8rem;
+    color: var(--bg-color);
+}
+.show-more-info {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(8rem);
+    transition: all 0.3s ease-in-out;
+}
+.show-more-info.active {
+    position: static;
+    visibility: show;
+    display: block;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+.you-match {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0;
+    position: absolute;
+    transition: all 0.4s ease-in;
+    color: var(--like-color);
+}
+.fa-arrow-up {
+    position: absolute;
+    right: 2rem;
+    bottom: 4rem;
+    color: #fffffe;
+    font-size: 4rem;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+}
+.fa-arrow-up.active {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* LIKE AND DISLIKE CONTAINER */
+.like-btns-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+.circle {
+    font-size: 3rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+}
+.circle:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in;
+}
+.fa-heart {
+    border: #00ebc7 solid 0.2rem;
+    color: #00ebc7;
+}
+.fa-poop {
+    border: #ff5470 solid 0.2rem;
+    color: #ff5470;
+}
+
+/* MATCHES */
+h3 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--gold-color);
+    text-transform: uppercase;
+}
+.matches-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.match-img {
+    width: 20rem;
+    display: block;
+}
+.match {
+    position: relative;
+    margin: 1rem;
+    border: #00ebc7 solid;
+    border-radius: 1rem;
+}
+.match p {
+    position: absolute;
+    color: var(--bg-color);
+    font-size: 1.2rem;
+    bottom: 1rem;
+    left: 1rem;
+}
